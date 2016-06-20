@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Quick start with Tree</title>
+    <script type="text/javascript" src="codebase/webix.js"></script>
+    <link rel="stylesheet" type="text/css" href="codebase/webix.css">
+</head>
+<body>
+<div id="box" style="width:1000px;height:500px;"></div>
+<script>
+    //here you will place your JavaScript code
+    //tree = new webix.ui({container:"box", view:"tree" })
+    var s1 = "Бакалавр";
+
+    tree = new webix.ui({
+        container:"box",
+        view:"tree",
+        src : "1.json",
+       // url: "http://api-campus-kpi-ua.azurewebsites.net/SelectiveDiscipline/blocks/all"
+        data : [
+            {id : "1", value :"Бакалавр", open: true, data :[
+                {id :"1.1" , value : "Екологічні навчальні дисципліни"}]},
+            {id : "2", value : "Магістр", open: true, data : [
+                {id : "2.1", value : "Історичні навчальні дисципліни"}
+            ]}
+            ]
+    });
+
+
+</script>
+</body>
+</html>
